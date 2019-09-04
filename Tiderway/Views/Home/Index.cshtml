@@ -1,0 +1,203 @@
+﻿
+@{
+    ViewBag.Title = "首页";
+    Layout = "~/Views/Shared/_DefaultLayoutPage.cshtml";
+}
+<style type="text/css">
+	#d_home {
+		width: 100%;
+		height: 700px;
+		
+		text-align: center;
+		background: url(../../Content/img/AM028psd.jpg) ;
+
+		background-position:-300px;
+	}
+	.d_info {
+		width:94%;
+		margin:0 auto;
+	
+	}
+		.d_info > div {
+			float: left;
+			width: 46%;
+			padding: 1%;
+			margin-top: 30px;
+			max-width: 800px;
+			min-height: 400px;
+			text-align: center;
+			margin-left: 2%;
+			cursor:pointer;
+			/*background: -webkit-linear-gradient(#002667, white,white);
+			background: -o-linear-gradient(#002667, white); 
+			background: -moz-linear-gradient(#002667, white);
+			background: linear-gradient(#002667, white,white);*/  
+		}
+	
+	
+	#d_aischool {
+		background: url(../../Content/img/school.png) no-repeat;
+		
+	}
+	#d_aiyw {
+		background: url(../../Content/img/yw.png) no-repeat;
+	}
+	#d_aiwl {
+		background: url(../../Content/img/wl.png) no-repeat;
+	}
+	#d_aisafe {
+		background: url(../../Content/img/safe.png) no-repeat;
+		background-position-y: -70px;
+		background-size: 70% !important;
+	}
+	.d_ai {
+		min-height: 400px !important;
+		min-width: 720px !important;
+		background-size: 100% !important;
+		/*box-shadow: 3px 3px 3px #808080;*/
+		transition: transform 0.5s;
+		-moz-transition: transform 0.5s; /* Firefox 4 */
+		-webkit-transition: transform 0.5s; /* Safari and Chrome */
+		-o-transition: transform 0.5s; /* Opera */
+	}
+		.d_ai:hover {
+		
+			transform: scale(1.05);
+		}
+	.di_title {
+		color: white;
+		font-size: 20px;
+		background-color: #F08519;
+		padding: 10px;
+		width: 100%;
+		margin-left: -10px;
+		box-shadow: 3px 3px 3px #808080;
+		min-width: 720px !important;
+	}
+	#d_content {
+		width:80%;
+		min-width:900px;
+		margin:10px auto;
+		min-height:900px;
+		padding:10px;
+	}
+	.dc_info {
+		margin-top:20px;
+	}
+	.dc_detail {
+		width: 35%;
+		background-color: #e9e9e9;
+		padding: 10px;
+	}
+	#ul_duw > li b {
+		color:#F08519;
+	}
+	#d_content hr {
+		margin: 60px 0;
+	}
+</style>
+<div id="d_home">
+	<div style="padding-top:250px;">
+		<h1 style="color:white;margin:auto;">电子班牌&nbsp;&nbsp;&nbsp;&nbsp;智慧教育&nbsp;&nbsp;&nbsp;&nbsp;智能运维&nbsp;&nbsp;&nbsp;&nbsp;物联网应用</h1>
+		<p style="font-size:18px;color:white">TIDERWAY流量管理、互联网管理网关产品官网，请访问</p>
+	</div>
+</div>
+<div id="d_content">
+	<div class="dc_info">
+		<div style="float:left;" class="dc_detail">
+			<h3>电子班牌</h3>
+			<p style="line-height:25px;color:#464646">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;云数字电子班牌,是当今校园文化建设、数字化建设系统之一,以触摸屏为载体,展示班级和课程信息、班级活动以及通知公告等内容,代替和拓展了传统班级板报和墙体宣传，还有特色的考勤管理系统和家校及时沟通,为学生、家长和老师提供新颖的师生交流及校园服务平台。</p>
+			<div style="float:right;">
+				<a href="/Home/BanPai">查看详细>></a>
+			</div>
+		</div>
+		<div style="float:right;width:60%;">
+			<img src="~/Content/img/banpai.png" style="width:100%;" />
+		</div>
+		<div class="clear"></div>
+	</div>
+	<hr style="border-color:#F08519;" />
+	<div class="dc_info">
+		<div style="float:left;width:60%;">
+			<img src="~/Content/img/school.png" style="width:100%;" />
+		</div>
+		<div style="float:right;" class="dc_detail">
+			<h3>智慧校园</h3>
+			<p style="line-height:25px;color:#464646">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;智慧校园是信息化发展的必然趋势，是院校校园网络化和 信息化建设的高级阶段。高校智慧校园建设是一项长期的、复 杂的系统性工程，要结合自身特征，从实际出发，与互联网企业 深度合作与开发，建设具有自身特色的智慧校园平台，实现教 学管理、科研管理以及师生校园生活有机融合的新型校园生态 模式，进而为学校师生提供更为人性化、个性化、智能化的特色 服务，提高学校信息化建设整体水平。</p>
+			<div style="float:right;">
+				<a href="/Home/School">查看详细>></a>
+			</div>
+
+		</div>
+		<div class="clear"></div>
+	</div>
+	<hr style="border-color:#F08519;" />
+	<div class="dc_info">
+		<div style="float:left;" class="dc_detail">
+			<h3>智能运维</h3>
+			<p style="line-height:25px;color:#464646">
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				<ul style="line-height:25px;margin-top:-40px;" id="ul_duw">
+					<li><b>全面的性能管理</b>&nbsp;&nbsp;&nbsp;能够提供对现在所有的设备和服务质量进行实时监测，并且提供动态阈值的告警。</li>
+					<li><b>统一的资源管理</b>&nbsp;&nbsp;&nbsp;很多企业业务都上云了，需要有统一的监控平台，可以把所有业务相应资源视图抓取出来，便于我们对整体资源有一个合理的预估和分配，并从整体角度评估各个业务部门对资源的使用情况。</li>
+					<li><b>及时的故障告警管理</b>&nbsp;&nbsp;&nbsp;我们发现有很多产品还不能做到完全及时的告警，告警发生后总是延时才能知晓，需要实时的准确的告警，减少延迟和误报。</li>
+					<li><b>集中统一展现管理</b>&nbsp;&nbsp;&nbsp;把很多不同的监控子系统集成起来，这个在现在的企业里面需求是很大的，借助于各种工具，采集数据之后自动合成一个报表统一展现出来，方便管理。</li>
+				</ul>
+			</p>
+			<div style="float:right;">
+				<a href="/Home/GNC">查看详细>></a>
+			</div>
+		</div>
+		<div style="float:right;width:60%;">
+			<img src="~/Content/img/yunwei.png" style="width:100%;" />
+		</div>
+		<div class="clear"></div>
+	</div>
+	<hr style="border-color:#F08519;" />
+	<div class="dc_info">
+
+		<div style="float:left;width:60%;">
+			<img src="~/Content/img/wl.png" style="width:100%;" />
+		</div>
+		<div style="float:right;" class="dc_detail">
+			<h3>物联网应用</h3>
+			<p style="line-height:25px;color:#464646">
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				聚焦物联网数据采集，以物联网关为载体，深入健康医疗和教育行业垂直应用，提供从端到平台的产品方案，打造物联网应用的基础性产品解决方案。
+			</p>
+			<div style="float:right;">
+				健康物联网&nbsp;&nbsp;<a href="/Home/Health">查看详细>></a><br />
+				校园物联网&nbsp;&nbsp;<a href="/Home/SchoolHealth">查看详细>></a>
+			</div>
+
+		</div>
+		<div class="clear"></div>
+
+	</div>
+</div>
+@*<div style="padding:10px;">
+	<div class="d_info">
+		<div>
+			<div class="di_title">智慧教育</div>
+			<div id="d_aischool" class="d_ai">
+			</div>
+		</div>
+		<div>
+			<div class="di_title">智能运维</div>
+			<div id="d_aiyw" class="d_ai"></div>
+		</div>
+
+	</div>
+	<div class="clear"></div>
+	<div class="d_info">
+		<div>
+			<div class="di_title">物联网应用</div>
+			<div id="d_aiwl" class="d_ai"></div>
+		</div>
+		<div>
+			<div class="di_title">网络安全</div>
+			<div id="d_aisafe" class="d_ai"></div>
+		</div>
+	</div>
+	<div class="clear"></div>
+</div>*@

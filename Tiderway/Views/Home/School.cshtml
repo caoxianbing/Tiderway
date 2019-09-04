@@ -1,0 +1,130 @@
+﻿
+@{
+	ViewBag.Title = "天天学-智慧教育";
+	Layout = "~/Views/Shared/_DefaultLayoutPage.cshtml";
+}
+<style type="text/css">
+	#d_school {
+		width: 100%;
+		min-width: 900px;
+		background: url(../../Content/img/jiaoyu.png);
+		min-height: 400px;
+		background-size: 100%;
+	}
+
+	#d_scontent {
+		width: 80%;
+		margin: 20px auto;
+		padding: 50px;
+	}
+
+	.d_scinfo {
+		color: white;
+		font-size: 18px;
+		margin-top: 25px;
+		margin-left: -1000px;
+	}
+
+		.d_scinfo img {
+			width: 90px;
+		}
+
+	#d_sctitle {
+		background-color: #E408AC;
+		color: white;
+		letter-spacing: 5px;
+		font-size: 22px;
+		font-weight: bold;
+		padding: 10px 15px;
+		width: 210px;
+		text-align: center;
+		margin-left: 15%;
+	}
+
+	#d_detail {
+		text-align: center;
+		margin-bottom: 40px;
+	}
+
+		#d_detail h2 {
+			padding: 10px;
+			width: 80%;
+			min-width: 900px;
+			margin: 0 auto;
+			color: #F08519;
+			border-bottom: 1px solid #808080;
+		}
+
+		#d_detail > div {
+			margin-top: 40px;
+		}
+</style>
+<div id="d_school">
+	<div id="d_scontent">
+		<div id="d_sctitle">推动教育转变</div>
+		<p class="d_scinfo">
+			教育过程&nbsp;&nbsp;“非量化”
+			<img src="~/Content/img/fx.png" />
+			“可量化”
+		</p>
+		<p class="d_scinfo">
+			教育决策&nbsp;&nbsp;“经验化”
+			<img src="~/Content/img/fx.png" />
+			“数据化”
+		</p>
+		<p class="d_scinfo">
+			教育模式&nbsp;&nbsp;“大众化”
+			<img src="~/Content/img/fx.png" />
+			“个性化”
+		</p>
+		<p class="d_scinfo">
+			教育管理&nbsp;&nbsp;“不可见”
+			<img src="~/Content/img/fx.png" />
+			“可视化”
+		</p>
+		<p class="d_scinfo">
+			教育评价&nbsp;&nbsp;“单一化”
+			<img src="~/Content/img/fx.png" />
+			“综合化”
+		</p>
+	</div>
+</div>
+<div id="d_detail">
+	<h2>
+		天天学智慧教育产品
+	</h2>
+	<div>
+		<p class="dd_title">
+			产品方案
+		</p>
+		<img src="~/Content/img/school/fangan.png" class="dd_img" />
+	</div>
+	<div>
+		<p class="dd_title">
+			技术方向
+		</p>
+		<img src="~/Content/img/school/fangxiang.png" class="dd_img" />
+	</div>
+	<div>
+		<p class="dd_title">
+			目标愿景
+		</p>
+		<img src="~/Content/img/school/yuanjing.png" class="dd_img" />
+	</div>
+</div>
+
+@Html.Partial("~/Views/Shared/_DemoPage.cshtml")
+<script type="text/javascript">
+	$().ready(function () {
+		$(".d_scinfo:first").animate({ marginLeft: '300px' }, 500, function () {
+			$(".d_scinfo:eq(1)").animate({ marginLeft: '350px' }, 400, function () {
+				$(".d_scinfo:eq(2)").animate({ marginLeft: '400px' }, 400, function () {
+					$(".d_scinfo:eq(3)").animate({ marginLeft: '450px' }, 300, function () {
+						$(".d_scinfo:eq(4)").animate({ marginLeft: '500px' }, 300);
+					});
+				});
+			});
+		});
+	});
+</script>
+

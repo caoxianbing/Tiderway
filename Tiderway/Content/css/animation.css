@@ -1,0 +1,50 @@
+﻿@keyframes headerHover {
+	from {
+		background: white;
+		color:black;
+	}
+
+	to {
+		background: #F08519;
+		color:white;
+	}
+}
+
+@-moz-keyframes headerHover /* Firefox */
+{
+	from {
+		background: white;
+		color: black;
+	}
+
+	to {
+		background: #F08519;
+		color: white;
+	}
+}
+
+@-webkit-keyframes headerHover /* Safari 和 Chrome */
+{
+	from {
+		background: white;
+		color: black;
+	}
+
+	to {
+		background: #F08519;
+		color: white;
+	}
+}
+
+@-o-keyframes headerHover /* Opera */
+{
+	from {
+		background: white;
+		color: black;
+	}
+
+	to {
+		background: #F08519;
+		color: white;
+	}
+}

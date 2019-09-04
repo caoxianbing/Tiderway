@@ -1,0 +1,81 @@
+﻿
+@{
+    ViewBag.Title = "智能班牌";
+    Layout = "~/Views/Shared/_DefaultLayoutPage.cshtml";
+}
+<link href="~/Content/css/jquery.easy_slides.css" rel="stylesheet" />
+<script src="~/Content/js/jquery.easy_slides.js"></script>
+<style type="text/css">
+	#d_bpinfo {
+		width: 90%;
+		margin: 0 auto;
+		text-align: center;
+		border-top: 2px solid #808080;
+		padding-top: 20px;
+		background-color:white;
+		
+		}
+		#d_bpinfo img {
+			width:95%;
+			min-width:700px;
+			max-width:1100px;
+		}
+	.d_bptitle {
+		width: 90%;
+		margin: 0 auto;
+		font-size: 18px;
+		font-weight: bolder;
+		margin-top: -80px;
+		color: #F08519;
+	}
+	
+</style>
+<div style="width:100%;background-color:#efefef">
+	<div style="width:75%;margin:0 auto;margin-top:-180px;">
+		<div class="slider slider_circle_10" style="margin-top:-130px !important;">
+			<div>
+				<img src="~/Content/img/bp/bp1.jpg" style="width:100%;" />
+
+			</div>
+			<div>
+				<img src="~/Content/img/bp/bp2.jpg" style="width:100%;" />
+
+			</div>
+			<div>
+				<img src="~/Content/img/bp/bp3.jpg" style="width:100%;" />
+			</div>
+			<div>
+				<img src="~/Content/img/bp/bp4.jpg" style="width:100%;" />
+			</div>
+			<div>
+				<img src="~/Content/img/bp/bp5.jpg" style="width:100%;" />
+			</div>
+			<div class="next_button"></div>
+			<div class="prev_button"></div>
+		</div>
+	</div>
+</div>
+<div class="d_bptitle">
+	产品详细
+</div>
+<div id="d_bpinfo">
+	
+	<img src="~/Content/img/bp/bpinfo1.jpg" />
+	<img src="~/Content/img/bp/bpinfo2.jpg" />
+	<img src="~/Content/img/bp/bpinfo3.jpg" />
+	<img src="~/Content/img/bp/bpinfo4.jpg" />
+	<img src="~/Content/img/bp/bpinfo5.jpg" />
+	<img src="~/Content/img/bp/bpinfo6.jpg" />
+	<img src="~/Content/img/bp/bpinfo7.jpg" />
+</div>
+
+@Html.Partial("~/Views/Shared/_DemoPage.cshtml")
+<script type="text/javascript">
+	$().ready(function () {
+		$('.slider_circle_10').EasySlides({
+			'autoplay': true,
+			'show': 13
+		})
+	});
+</script>
+

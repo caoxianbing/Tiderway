@@ -1,0 +1,259 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+	<meta name="viewport" content="width=device-width" />
+	<title>@ViewBag.Title</title>
+	<link href="~/Content/css/animation.css" rel="stylesheet" />
+	<link href="~/Content/css/twlayout.css" rel="stylesheet" />
+	<script src="~/Content/js/jquery-3.3.1.min.js"></script>
+	<style type="text/css">
+		html, body {
+			padding: 0;
+			margin: 0;
+			
+		}
+		a {
+			text-decoration:none;
+			color:#4071e4;
+			cursor:pointer;
+		}
+			a:hover {
+				color:blue;
+			}
+		#d_layout {
+			width: 100%;
+			font-family: 'Microsoft YaHei';
+			
+		}
+
+		#dl_header {
+			z-index: 999;
+			position: fixed;
+			width: 100%;
+			background-color: white;
+			box-shadow: 2px 2px 2px #cecece;
+			line-height: 40px;
+			height: 40px;
+			padding: 5px 0;
+			top: 0;
+			left: 0;
+			min-width: 900px;
+		}
+
+		#dl_body {
+			margin-top: 55px;
+			min-width:900px;
+		}
+
+		#img_logo {
+			height: 40px;
+		}
+
+		#dlh_menu {
+			padding: 0;
+			margin: 0;
+			float: right;
+			margin-right: 5%;
+		}
+
+			#dlh_menu > li {
+				float: left;
+				padding: 0 15px;
+				cursor: pointer;
+				list-style: none;
+				position: static;
+			}
+
+				#dlh_menu > li:hover {
+					animation: headerHover 0.5s;
+					-moz-animation: headerHover 0.5s; /* Firefox */
+					-webkit-animation: headerHover 0.5s; /* Safari 和 Chrome */
+					-o-animation: headerHover 0.5s;
+					background: #F08519;
+					color: white;
+				}
+
+		.clear {
+			clear: both;
+		}
+
+		.d_next {
+			position: absolute;
+			top: 50px;
+			background-color:white;
+			display: none;
+			padding: 5px 10px;
+			box-shadow: 0 0 6px #cecece;
+		}
+		.dn_doc {
+			color:black !important;
+		}
+			.dn_doc:hover {
+				color:#555 !important;
+			}
+		#dl_hover {
+			padding: 10px 20px;
+			background-color: #F08519;
+			color: white;
+			font-size: 18px;
+			position: fixed;
+			right: 5px;
+			bottom: 200px;
+			cursor: pointer;
+			z-index: 999;
+		box-shadow:3px 3px 3px #555;
+		}
+
+		#dl_wxcode {
+			padding: 10px;
+			background-color: #F08519;
+			color: white;
+			position: fixed;
+			right: 5px;
+			bottom: 250px;
+			cursor: pointer;
+			display: none;
+			z-index: 999;
+			box-shadow: 3px 3px 3px #555;
+		}
+		
+		#dl_foot {
+			background-color: #eab56a;
+			width: 100%;
+			position: static;
+			line-height: 30px;
+			margin-top: 15px;
+			padding-top: 30px;
+			padding-bottom: 30px;
+			color: #555;
+			font-size: 15px;
+			min-width:900px;
+		}
+		#dlf_content {
+			background-color: #f7f7f7;
+			width: 78%;
+			display: flex;
+			margin: 0 auto;
+		border:1px solid #808080;
+		/*border-radius:5px;*/
+			padding: 30px;
+			justify-content: space-around;
+			min-width: 900px;
+		}
+		.dc_friend img{
+			width:100px;
+		}
+		.dd_title {
+			width: 200px;
+			margin: 20px auto;
+			font-size: 18px;
+			background-color: #ebdbb8;
+			padding: 10px;
+			font-weight: 600;
+			text-align: center;
+			/*box-shadow:2px 2px 2px #555;*/
+			letter-spacing: 5px;
+		}
+
+		.dd_img {
+			width: 75%;
+			min-width: 900px;
+		}
+	</style>
+</head>
+<body>
+	<div id="d_layout">
+
+		<div id="dl_header">
+			<div style="float:left;margin-left:5%;cursor:pointer;" onclick="location.href='Index'">
+				<img src="~/Content/img/logo.png" id="img_logo" />
+			</div>
+			<ul id="dlh_menu">
+				<li onclick="location.href='/Home/School'">
+					天天学智慧教育 @*<span class="sp_icon">+</span>*@
+					@*<div class="d_next">
+				<div class="dn_doc" onclick="location.href='/Home/School'">天天学-智慧校园</div>
+				<div class="dn_doc" onclick="location.href='/Home/BanPai'">智能电子班牌</div>
+			</div>*@
+				</li>
+				<li onclick="location.href='/Home/BanPai'">智能电子班牌</li>
+				<li>
+					物联网应用 <span class="sp_icon">+</span>
+					<div class="d_next">
+						<div class="dn_doc" onclick="location.href='/Home/SchoolHealth'">校园物联网产品方案</div>
+						<div class="dn_doc" onclick="location.href='/Home/Health'">健康物联网产品方案</div>
+					</div>
+				</li>
+				<li onclick="location.href='/Home/GNC'">GNC智能运维</li>
+				<li onclick="window.open('http://www.tiderway.com')">流量管理</li>
+				<li onclick="window.open('http://www.tiderway.com')">互联网管理网关</li>
+
+
+				@*<li onclick="window.open('http://www.tiderway.com')">网络安全</li>*@
+
+			</ul>
+			<div class="clear"></div>
+		</div>
+
+		<div id="dl_body">
+			@RenderBody()
+		</div>
+		<div id="dl_foot">
+			<div id="dlf_content">
+				<div>
+					<span style="font-size:18px;">
+						上海戴德网络科技有限公司<br />
+						上海策溯科技有限公司
+					</span>
+					<div>地址：上海市松江区莘砖公路518号临港科技城5幢</div>
+					<div>备案号码：沪ICP备14000222号</div>
+
+				</div>
+				<div>
+					<span style="font-size:18px">商务合作</span>
+					<div style="text-align:left;">
+						<div>邮箱：tony@tiderway.com</div>
+						<div>咨询热线：021-54891341 54891342</div>
+						
+					</div>
+
+				</div>
+				<div>
+					<img src="~/Content/img/logo.png"  style="width:200px;"/>
+				</div>
+
+			</div>
+			@*<div style="font-size:15px;"><center>ICP备案号</center></div>*@
+		</div>
+		<div id="dl_hover">立即咨询</div>
+		<div id="dl_wxcode">
+			<center>扫码加微信详聊</center>
+			<img src="~/Content/img/wxcode.jpg" style="width:140px;height:140px;margin-top:5px;"/>
+		</div>
+	</div>
+	<script type="text/javascript">
+		$().ready(function () {
+			$("#dlh_menu>li").hover(function () {
+				
+				if ($(this).find(".d_next").length > 0) {
+					$(this).children(".d_next").stop(true);
+					$(this).children(".d_next").slideDown();
+				}
+			},function () {
+				if ($(this).find(".d_next").length > 0) {
+					$(this).text().replace("-", "+");
+
+					$(this).children(".d_next").slideUp();
+				}
+				});
+			$("#dl_hover").hover(function () {
+				$("#dl_wxcode").stop(true);
+				$("#dl_wxcode").slideDown();
+			}, function () {
+				$("#dl_wxcode").slideUp();
+				});
+		});
+	</script>
+</body>
+</html>
